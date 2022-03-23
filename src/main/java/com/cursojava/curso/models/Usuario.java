@@ -5,9 +5,10 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+//import javax.persistence.Column;
+//import javax.persistence.Entity;
+//import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name= "usuarios")
@@ -15,6 +16,9 @@ import javax.persistence.Table;
 @ToString @EqualsAndHashCode
 
 public class Usuario {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name= "id")
     private Long id;
 
